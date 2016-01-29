@@ -1,0 +1,54 @@
+package com;
+import java.util.*;
+
+public class Hash<K,V> {
+
+	private final int SIZE = 20;
+	LinkedList<Cell<K,V>>[] items;
+	
+	public Hash() {
+		items = (LinkedList<Cell<K,V>>[]) new LinkedList[SIZE];
+	}
+	public int hashCode(K key) {
+		return key.toString().length() % SIZE;
+	}
+	
+	public void put(K key, V value) {
+		int hashCode = hashCode(key);
+		LinkedList<Cell<K,V>> itemList;
+		if(items[hashCode] == null) {
+			itemList = new LinkedList<Cell<K,V>> ();
+		} else {
+			itemList = items[hashCode];
+		}
+		// Search for item with same key
+		for(Cell<K,V> item : itemList){
+			if(item.getKey().equals(key)) {
+				itemList.remove(item);
+			}
+			
+		}
+		Cell<K,V> cell = new Cell<K,V>(key, value);
+		itemList.add(cell);
+		
+	}
+	
+	public V get(K key) {
+		int hashCode = hashCode(key);
+		if(items[hashCode] == null) {
+			return null;
+		}
+		// Search for item in the list
+		for(Cell<K,V> item :items[hashCode]) {
+			if(item.getKey().equals(key)) {
+				return item.getValue();
+			}
+		}
+		return null;
+		
+	}
+	public void remove (K key) {
+		
+	}
+
+}

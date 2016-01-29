@@ -1,0 +1,10 @@
+package com;
+
+public class ChopStick {
+	Lock lk;
+	
+	public ChopStick() {
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package com;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ChopStick {
+	Lock lk;
+	
+	public ChopStick() {
+		lk = new ReentrantLock();
+	}
+	
+	public boolean pickUp(){
+		return lk.tryLock();
+	}
+	
+
+}

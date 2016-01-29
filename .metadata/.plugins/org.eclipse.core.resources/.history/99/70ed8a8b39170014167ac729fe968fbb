@@ -1,0 +1,9 @@
+package com;
+
+public class SuffixTree {
+	SuffixTreeNode root = new SuffixTreeNode();
+	public SuffixTree(String s) {
+		
+	}
+
+}

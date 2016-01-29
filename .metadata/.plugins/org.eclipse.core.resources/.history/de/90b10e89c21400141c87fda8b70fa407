@@ -1,0 +1,27 @@
+package com;
+
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ChopStick {
+	Lock lk;
+	String name;
+	Semaphore sem;
+	
+	public ChopStick(int place) {
+		lk = new ReentrantLock();
+		name = "Chops" + place;
+		sem = new Semaphore(1);
+	}
+	
+	public boolean pickUp(){
+		//return lk.tryLock();
+		sem.acquire();
+	}
+	
+	public void putDown() {
+		//lk.unlock();
+		sem.release();
+	}
+}

@@ -1,0 +1,14 @@
+package com;
+import java.util.*;
+
+public class Hash<K,V> {
+
+	private final int SIZE = 20;
+	LinkedList<Cell<K,V>>[] items;
+	
+	public Hash() {
+		items = (LinkedList<Cell<K,V>>[]) LinkedList<Cell<K,V>>[SIZE];
+	}
+	
+
+}

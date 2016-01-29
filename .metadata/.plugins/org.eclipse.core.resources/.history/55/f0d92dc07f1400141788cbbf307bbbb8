@@ -1,0 +1,15 @@
+package com;
+
+import java.util.*;
+
+public class Brackets {
+	ArrayList<String> combos;
+	public void getAllCombos(int leftParan, int rightParan, char[] str, int index) {
+		if(leftParan < 0 || rightParan < leftParan ) return;
+		if(righhParan == 0) {
+			
+		}
+		
+	}
+
+}

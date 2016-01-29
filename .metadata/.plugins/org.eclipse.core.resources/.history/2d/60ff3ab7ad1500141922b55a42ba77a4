@@ -1,0 +1,21 @@
+package com;
+import java.util.*;
+
+public class Hash<K,V> {
+
+	private final int SIZE = 20;
+	LinkedList<Cell<K,V>>[] items;
+	
+	public Hash() {
+		items = (LinkedList<Cell<K,V>>[]) new LinkedList[SIZE];
+	}
+	public int hashCode(K key) {
+		return key.toString().length() % SIZE;
+	}
+	
+	public void put(K key, V value) {
+		int hashCode = hashCode(key);
+		
+	}
+
+}

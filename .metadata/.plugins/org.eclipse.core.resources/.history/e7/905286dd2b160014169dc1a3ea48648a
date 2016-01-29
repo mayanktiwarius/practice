@@ -1,0 +1,15 @@
+package com;
+
+public class CircleTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CircularArray<Integer> array = new CircularArray<Integer> (10);
+		array.set(0, 10);
+
+	}
+
+}

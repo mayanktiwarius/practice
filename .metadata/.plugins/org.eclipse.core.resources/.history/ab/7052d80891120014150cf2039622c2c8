@@ -1,0 +1,29 @@
+
+import java.io.*;
+import java.util.*;
+
+
+public class Combination {
+	
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Keep entering the strings");
+		while(true) {
+			try {
+				//br.readLine();
+				System.out.println("String entered" + br.readLine());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public ArrayList<String> permutation(String content) {
+		ArrayList<String> combos;
+		
+		return combos;
+		
+	}
+
+}

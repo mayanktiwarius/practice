@@ -1,0 +1,22 @@
+package com;
+
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ChopStick {
+	Lock lk;
+	String name;
+	
+	public ChopStick(int place) {
+		lk = new ReentrantLock();
+		name = "Chops" + place;
+	}
+	
+	public boolean pickUp(){
+		return lk.tryLock();
+	}
+	
+	public void putDown() {
+		lk.unlock();
+	}
+}

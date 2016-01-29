@@ -1,0 +1,52 @@
+package com;
+
+import java.util.*;
+import java.io.*;
+
+public class Brackets {
+	
+	public void getAllCombos(int leftParan, int rightParan, char[] str, int index, ArrayList<String> combos) {
+		if(leftParan < 0 || rightParan < leftParan ) return;
+		if(rightParan == 0) {
+			String data = String.copyValueOf(str);
+			combos.add(data);
+			return;
+		}
+		// Add left bracket
+		str[index] = '(';
+		getAllCombos(leftParan -1, rightParan, str, index +1, combos );
+		
+		// Add right bracket
+		str[index] = ')';
+		
+		getAllCombos(leftParan, rightParan -1, str, index + 1, combos);
+		return;
+		
+	}
+	public static void main (String args) {
+		while(true){
+			try {
+				System.out.println("Enter the number of brackets required");
+				BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
+
+				int data = Integer.parseInt(br.readLine());
+				Brackets b = new Brackets();
+				char str[] = new char[2*data];
+				ArrayList<String> combos = new ArrayList<String>();
+				b.getAllCombos(data, data, str, 2*data, combos);
+				System.out.println(" All combinations");
+				for(String combo : combos) {
+					System.out.println(combo);
+				}
+			} catch (NumberFormatException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+	}
+
+}

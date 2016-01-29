@@ -1,0 +1,11 @@
+package com;
+
+import java.util.HashMap;
+
+public class SuffixTreeNode {
+	HashMap<Character,SuffixTreeNode> children = new HashMap<Character,SuffixTreeNode>();
+	char value;
+	ArrayList<Integer> indexes = new ArrayList<Integer>();
+	
+
+}

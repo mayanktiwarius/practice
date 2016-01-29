@@ -1,0 +1,30 @@
+package com;
+
+import java.io.*;
+
+public class TrieTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			System.out.println("Enter the string");
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			String data;
+			data = br.readLine();
+			SuffixTree st = new SuffixTree(data);
+			System.out.println("Enter the substring that you want to search");
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+
+	}
+
+}

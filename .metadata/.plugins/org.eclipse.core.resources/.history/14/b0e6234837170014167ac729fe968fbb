@@ -1,0 +1,17 @@
+package com;
+
+
+import java.util.*;
+
+public class SuffixTreeNode {
+	HashMap<Character,SuffixTreeNode> children = new HashMap<Character,SuffixTreeNode>();
+	char value;
+	ArrayList<Integer> indexes = new ArrayList<Integer>();
+	
+	public void insertString(String s, int index) {
+		
+	}
+	
+	
+
+}

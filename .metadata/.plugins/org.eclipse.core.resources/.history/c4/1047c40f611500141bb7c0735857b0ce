@@ -1,0 +1,8 @@
+package com;
+
+public class Hash<K,V> {
+	private final int SIZE = 20;
+	LinkedList<Cell<K,V>>[] items;
+	
+
+}

@@ -1,0 +1,20 @@
+package com;
+
+public class CircularArray<T> {
+	private T[] items;
+	
+	
+	public CircularArray(int size) {
+		items = (T[]) new Object[size];		
+	}
+	
+	private int convertIndex(int index) {
+		if(index < 0) {
+			index += items.length;
+		}
+		return (head + index) % items.length;
+		
+	}
+	
+
+}

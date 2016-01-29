@@ -1,0 +1,57 @@
+
+import java.io.*;
+import java.util.*;
+
+
+public class Combination {
+	
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Keep entering the strings");
+		Combination test = new Combination();
+		while(true) {
+			try {
+				//br.readLine();
+				String data = br.readLine();
+				//System.out.println("String entered" + br.readLine());
+				
+				ArrayList<String> combos = test.permutation(data);
+				for (String combo : combos) {
+					System.out.println(combo);
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public String createCombo(int pos, char c, String data) {
+		
+		String newData = data.substring(0,pos) + c + data.substring(pos);
+		return newData;
+		
+	}
+	
+	public ArrayList<String> permutation(String content) {
+		ArrayList<String> combos;
+		if(content == null) return null;
+		if (content.length() == 0) {
+			return new ArrayList<String> ();
+		}
+		char start = content.charAt(0);
+		String remaining = content.substring(1);
+		combos = permutation(remaining);
+		ArrayList<String> newCombos = new ArrayList<String>();
+		for(String combo: combos){
+			for(int i = 0; i < combo.length(); i++){
+				String data = createCombo(i,start,combo);
+				newCombos.add(data);
+			}
+		}
+		
+		return newCombos;
+		
+	}
+
+}

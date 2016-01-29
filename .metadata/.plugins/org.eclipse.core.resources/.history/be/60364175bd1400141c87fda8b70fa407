@@ -1,0 +1,12 @@
+package com;
+
+import java.util.concurrent.locks.Lock;
+
+public class ChopStick {
+	Lock lk;
+	
+	public ChopStick() {
+		
+	}
+
+}

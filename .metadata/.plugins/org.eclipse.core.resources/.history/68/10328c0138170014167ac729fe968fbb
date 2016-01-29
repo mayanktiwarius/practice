@@ -1,0 +1,28 @@
+package com;
+
+
+import java.util.*;
+
+public class SuffixTreeNode {
+	HashMap<Character,SuffixTreeNode> children = new HashMap<Character,SuffixTreeNode>();
+	char value;
+	ArrayList<Integer> indexes = new ArrayList<Integer>();
+	
+	public void insertString(String s, int index) {
+		indexes.add(index);
+		if(s.length() == 0 || s == null) {
+			return;
+		}
+		value = s.charAt(0);
+		SuffixTreeNode child = null;
+		if(children.containsKey(value)) {
+			child = children.get(value);
+		} else {
+			child = new SuffixTreeNode();
+		}
+		
+	}
+	
+	
+
+}

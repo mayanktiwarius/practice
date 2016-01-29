@@ -1,0 +1,15 @@
+package com;
+
+public class CircularArray<T> {
+	private T[] items;
+	
+	
+	public CircularArray(int size) {
+		items = (T[]) new Object[size];		
+	}
+	
+	private convertIndex(int index) {
+		
+	}
+
+}

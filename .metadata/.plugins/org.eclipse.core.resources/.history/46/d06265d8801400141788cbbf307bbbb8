@@ -1,0 +1,34 @@
+package com;
+
+import java.util.*;
+import java.io.*;
+
+public class Brackets {
+	ArrayList<String> combos;
+	public void getAllCombos(int leftParan, int rightParan, char[] str, int index) {
+		if(leftParan < 0 || rightParan < leftParan ) return;
+		if(rightParan == 0) {
+			String data = String.copyValueOf(str);
+			combos.add(data);
+			return;
+		}
+		// Add left bracket
+		str[index] = '(';
+		getAllCombos(leftParan -1, rightParan, str, index +1 );
+		
+		// Add right bracket
+		str[index] = ')';
+		
+		getAllCombos(leftParan, rightParan -1, str, index + 1);
+		return;
+		
+	}
+	public static void main (String args) {
+		while(true){
+			System.out.println("Enter the number of brackets required");
+			BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
+			
+		}
+	}
+
+}

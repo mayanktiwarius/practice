@@ -1,0 +1,7 @@
+package com;
+
+public class SuffixTreeNode {
+	HashMap<Character,SuffixTreeNode> children = new HashMap<Character,SuffixTreeNode>();
+	
+
+}

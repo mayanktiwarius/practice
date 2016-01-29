@@ -1,0 +1,42 @@
+package com;
+import com.ChopStick;
+
+public class Philosopher extends Thread{
+	ChopStick leftChopstick;
+	ChopStick rightChopstick;
+	String name;
+	
+	public Philosopher(ChopStick left, ChopStick right, int leftnr, int rightnr){
+		leftChopstick = left;
+		rightChopstick = right;
+		name = "Phils" + leftnr + rightnr;
+	}
+	
+	
+	public void eat() {
+		if(!leftChopstick.pickUp()) {
+			return;
+		}
+		if(!rightChopstick.pickUp()) {
+			leftChopstick.putDown();
+			return;
+		}
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		rightChopstick.putDown();
+		leftChopstick.putDown();
+		return;
+	}
+	
+	public void run() {
+		for(int i = 0; i < 10; i++) {
+			eat();
+		}
+	}
+	
+
+}

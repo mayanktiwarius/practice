@@ -1,0 +1,7 @@
+package com;
+
+public class Hash<K,V> {
+	private final int SIZE = 20;
+	
+
+}

@@ -1,0 +1,17 @@
+package com;
+import com.ChopStick;
+
+public class Philosopher {
+	ChopStick leftChopstick;
+	ChopStick rightChopstick;
+	
+	public Philosopher(ChopStick left, ChopStick right){
+		leftChopstick = left;
+		rightChopstick = right;
+	}
+	
+	
+	
+	
+
+}

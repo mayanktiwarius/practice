@@ -1,0 +1,19 @@
+package com;
+import com.ChopStick;
+import com.Philosopher;
+
+public class Dinner {
+	static ChopStick [] chops;
+	static Philosopher [] phils;
+	
+	public static void main(String[] args) {
+		setUpDinner();
+		
+	}
+	public static void setUpDinner() {
+		chops = new ChopStick[5];
+		phils = new Philosopher[5];
+		
+	}
+
+}

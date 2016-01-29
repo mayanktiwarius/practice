@@ -1,0 +1,35 @@
+package com;
+import java.io.*;
+import java.util.*;
+public class Subset {
+	static ArrayList<String> set;
+	public static void main(String[] args) {
+		try {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter the number of items in the set");
+		//int count = Integer.parseInt(br.readLine());
+		set = new ArrayList<String>();
+		System.out.println("Enter the items");
+
+			int count = Integer.parseInt(br.readLine());
+			for(int i= 0; i< count; i++) {
+				String item = br.readLine();
+				set.add(item);
+			}
+		System.out.println("Subset are:");
+		Subset ss = new  Subset();
+		
+		ArrayList<ArrayList<String>> subsets = ss.getAllSubsets(set,count,0);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public 
+
+}

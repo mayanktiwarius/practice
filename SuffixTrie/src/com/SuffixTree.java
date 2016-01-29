@@ -1,0 +1,18 @@
+package com;
+
+import java.util.*;
+
+public class SuffixTree {
+	SuffixTreeNode root = new SuffixTreeNode();
+	public SuffixTree(String s) {
+		for (int i = 0; i < s.length(); i ++) {
+			String remainder = s.substring(i);
+			root.insertString(remainder, i);
+		}
+	}
+	
+	public ArrayList<Integer> search(String s) {
+		return root.search(s);
+	}
+
+}
