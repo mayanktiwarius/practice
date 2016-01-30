@@ -79,7 +79,7 @@ public class TestA {
 		int counter=0;
 		for(int i=0; i<records;i++) {
 			for(int j=0; j<2; j++){
-				tokens[counter] = tokens[counter].replaceAll("\\{", " ");
+				tokens[counter] = tokens[counter].replaceAll("\\{", " "); // Most tricky part in this parsing
 				tokens[counter] = tokens[counter].replaceAll("\\}", " ");
 				pairs[i][j] = Integer.parseInt(tokens[counter].trim());
 				System.out.println(pairs[i][j]);
